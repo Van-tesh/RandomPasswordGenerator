@@ -18,4 +18,9 @@ for char in range (1, nr_symbols+1):
   pasword += random.choice(Symbols)
   
 random.shuffle(pasword)
-print(''.join(pasword))
+
+# print(''.join(pasword))
+random_password= ""
+for char in pasword:
+  random_password+=char
+print(f"Your Random pasword is: {random_password}")  
