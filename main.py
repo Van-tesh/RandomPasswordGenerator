@@ -5,5 +5,17 @@ Symbols= ['!', '@' ,'#', '$', '%', '&', '*', '+']
 
 print ("Welcome to RandomPasswordGenerator")
 nr_letters= int(input("How many letters would you like in your paswword? \n"))
-nr_symbols= int(input("How many symbols would you like in your paswword? \n"))
-nr_numbers= int(input("How many numbers would you like in your paswword? \n"))
+nr_symbols= int(input(f"How many symbols would you like in your paswword? \n"))
+nr_numbers= int(input(f"How many numbers would you like in your paswword? \n"))
+
+pasword=[]
+for char in range (1, nr_letters+1):
+  pasword += random.choice(letters)
+
+for char in range (1, nr_numbers+1):
+  pasword += random.choice(numbers)
+for char in range (1, nr_symbols+1):
+  pasword += random.choice(Symbols)
+  
+random.shuffle(pasword)
+print(''.join(pasword))
